@@ -5,7 +5,7 @@ public class QuickSort {
         quickSort(array, 0 ,array.length-1);
     }
 
-    public static void quickSort(int[] array, int left, int right) {
+    private static void quickSort(int[] array, int left, int right) {
         if (left >= right) {
             return;
         }
@@ -15,7 +15,7 @@ public class QuickSort {
         quickSort(array, index, right);
     }
 
-    public static int partition(int[] array, int left, int right, int pivot) {
+    private static int partition(int[] array, int left, int right, int pivot) {
         while (left <= right) {
             while (array[left] < pivot) {
                 left++;
