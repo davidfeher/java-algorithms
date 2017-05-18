@@ -1,4 +1,7 @@
 import com.sun.org.apache.xpath.internal.SourceTree;
+import datastructure.Node;
+import datastructure.linkedlist.LinkedList;
+import datastructure.stack.StackImpl.StackArray;
 import sorting.BubbleSort;
 import sorting.MergeSort;
 import sorting.QuickSort;
@@ -20,5 +23,22 @@ public class Main {
         array = new int[]{10, 9, 4, 11, 3, 2, 1, 0, 19, 5};
         BubbleSort.Sort(array);
         System.out.println(Arrays.toString(array));
+
+        LinkedList myList = new LinkedList();
+        myList.add(3);
+        myList.add(5);
+
+        System.out.println(myList.toString());
+
+        System.out.println(myList.get(0));
+
+        StackArray stack = new StackArray(10);
+        stack.pop();
+        stack.push(12);
+        stack.push(1);
+        stack.push(7);
+        stack.pop();
+
+        System.out.println(stack);
         }
     }
