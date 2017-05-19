@@ -1,7 +1,9 @@
 import com.sun.org.apache.xpath.internal.SourceTree;
 import datastructure.Node;
 import datastructure.linkedlist.LinkedList;
+import datastructure.stack.Stack;
 import datastructure.stack.StackImpl.StackArray;
+import datastructure.stack.StackImpl.StackLinkedList;
 import sorting.BubbleSort;
 import sorting.MergeSort;
 import sorting.QuickSort;
@@ -32,7 +34,7 @@ public class Main {
 
         System.out.println(myList.get(0));
 
-        StackArray stack = new StackArray(10);
+        Stack stack = new StackArray(10);
         stack.pop();
         stack.push(12);
         stack.push(1);
@@ -40,5 +42,16 @@ public class Main {
         stack.pop();
 
         System.out.println(stack);
+
+        StackLinkedList stackLinkedList = new StackLinkedList();
+        System.out.println(stackLinkedList.peek());
+
+        stackLinkedList.push(10);
+        stackLinkedList.push(5);
+        System.out.println(stackLinkedList.peek());
+        stackLinkedList.pop();
+        System.out.println(stackLinkedList.peek());
+
+        System.out.println(stackLinkedList.numberOfElements());
         }
     }
