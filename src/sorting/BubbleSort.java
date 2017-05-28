@@ -4,7 +4,7 @@ package sorting;
 public class BubbleSort {
 
     public static void Sort(int[] array) {
-        for (int a : array) {
+        for (int i = array.length; i > 0; i--) {
             for (int j = 1; j < array.length; j++) {
                 if (array[j - 1] > array[j]) {
                     Swap(array, j - 1, j);

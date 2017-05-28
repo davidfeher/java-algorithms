@@ -1,7 +1,5 @@
 package sorting;
 
-import java.util.Arrays;
-
 public class MergeSort {
 
     private int[] array;
@@ -9,10 +7,10 @@ public class MergeSort {
 
     public void sort(int[] array) {
         this.array = array;
-        int length = array.length;
-        this.tempArray = new int[length];
-        mergeSort(0, length -1);
+        this.tempArray = new int[array.length];
+        mergeSort(0, array.length -1);
     }
+
     private void mergeSort(int lowerIndex, int higherIndex) {
         if (lowerIndex < higherIndex) {
 
@@ -26,9 +24,7 @@ public class MergeSort {
 
     private void merge(int lowerIndex, int center, int higherIndex) {
 
-        for (int i = lowerIndex; i <= higherIndex; i++) {
-            tempArray[i] = array[i];
-        }
+        System.arraycopy(array, lowerIndex, tempArray, lowerIndex, higherIndex + 1 - lowerIndex);
         int i = lowerIndex;
         int j = center + 1;
         int k = lowerIndex;
